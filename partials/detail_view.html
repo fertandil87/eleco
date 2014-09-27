@@ -1,0 +1,11 @@
+<div>
+    <h3 class="lead">{{currEntry.title}}</h3>
+
+    <video id="vPlayer" src="{{trustSrc(mediaOne(currEntry).url)}}" controls autoplay ng-show="hasVideo(currEntry)"></video>
+
+    <div class="well well-small">
+        <p ng-bind-html="currEntry.content"></p>
+
+        <p class="muted">Fuente: {{currEntry.publishedDate}} - <a href="{{currEntry.link}}" target="_blank" class="text-info" ng-click="videoStop()">Ver en {{feed_result.viewAt}}</a></p>
+    </div>
+</div>

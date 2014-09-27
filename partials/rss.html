@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 ng-cloak>{{page.name}}</h1>
+
+    <div class="well well-small" ng-repeat="entry in feed_result.entries" list-done="layoutDone()" ng-cloak>
+        <a href="" ng-click="viewDetail(entry)" class="pull-left rssThumb" title="view detail" data-toggle="tooltip"><img ng-repeat="thumbnail in mediaOne(entry).thumbnails" ng-src="{{thumbnail.url}}"></a>
+
+        <h5><a href="" ng-click="viewDetail(entry)" title="view detail" data-toggle="tooltip">{{entry.title| limitTo:35}}...</a></h5>
+
+        <p class="muted">
+            <span ng-show="entry.publishedDate">Publicado: {{entry.publishedDate}} -</span>
+            <span class="label label-info" ng-repeat="category in entry.categories">{{category}}</span>
+        </p>
+    </div>
+</div>

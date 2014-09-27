@@ -1,0 +1,15 @@
+<div>
+    <h1>Choose RSS Feed</h1>
+
+    <div class="changeList">
+        <div class="input-prepend">
+            <a ng-click="addFeed()" class="btn btn-primary add-on"><i class="foundicon-plus"></i> Add feed</a>
+            <input type="text" id="inputFeed" ng-model="newFeedUrl" placeholder="new feed url" on-enter="addFeed()">
+        </div>
+
+        <div class="btn-group btn-block" ng-repeat="feed in feedList" list-done="layoutDone()">
+            <a ng-click="chooseFeed($index)" class="btn">{{feed| strip_http}}</a>
+            <a ng-click="removeFeed($index)" class="btn btn-danger" title="Remove feed" data-toggle="tooltip"><i class="foundicon-remove"></i></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div>
+    <h2 ng-cloak>{{feed_result.title}}</h2>
+
+    <p ng-cloak>{{feed_result.description}}</p>
+
+    <div class="well well-small" ng-repeat="entry in feed_result.entries" list-done="layoutDone()" ng-cloak>
+        <a href="" ng-click="viewDetail(entry)" class="pull-left rssThumb" title="view detail" data-toggle="tooltip"><img ng-repeat="thumbnail in mediaOne(entry).thumbnails" ng-src="{{thumbnail.url}}"></a>
+
+        <h4><a href="" ng-click="viewDetail(entry)" title="view detail" ">{{entry.title}}</a></h4>
+
+        <p ng-bind-html="entry.contentSnippet"></p>
+
+        <p class="muted">
+            Publicado: {{entry.publishedDate}} -
+            <span class="label label-info" ng-repeat="category in entry.categories">{{category}}</span>
+        </p>
+    </div>
+</div>
