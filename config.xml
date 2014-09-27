@@ -4,12 +4,12 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "ar.com.eleco"
-        version   = "1.2.1">
+        version   = "1.0">
 
-    <name>Copa Cosa de Serranos</name>
+    <name>El Eco Digital</name>
 
     <description>
-        Actualizaciones de la Copa de Serranos
+        Ultimas noticias en el eco digital
     </description>
 
     <author href="http://www.eleco.com.ar" email="fertandil87@gmail.com">
